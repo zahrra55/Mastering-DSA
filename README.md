@@ -1,2 +1,2 @@
 # Mastering-DSA
-Udemy course
+Udemy course by Mr. AbdulBari
