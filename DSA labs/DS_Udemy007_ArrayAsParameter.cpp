@@ -1,4 +1,4 @@
-// This is parameter passing
+// This is Arrays as passing parameters:
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
