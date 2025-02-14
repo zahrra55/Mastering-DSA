@@ -1,4 +1,4 @@
-// This is parameter passing
+// This is Structs in functions
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
