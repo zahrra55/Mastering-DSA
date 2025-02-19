@@ -1,4 +1,5 @@
-// This is parameter passing
+// This is how to use constructor and destructor in a class.
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
