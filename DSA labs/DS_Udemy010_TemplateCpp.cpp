@@ -1,4 +1,5 @@
-// This is parameter passing
+// This is Templates 
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
