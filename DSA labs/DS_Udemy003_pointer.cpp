@@ -1,4 +1,5 @@
-// This is Pointer
+// This is Pointers
+
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -6,9 +7,8 @@ using namespace std;
 
 int main()
 {
-    //int a[5];
     int* p;
-    //p = a;
+    // This is how to use pointers in C:
     p = (int*)malloc(5 * sizeof(int));
     for (int i = 0;i < 5; i++)
     {
@@ -17,7 +17,7 @@ int main()
     }
         printf("%d\n%d\n", *p, p);
 
-    // In C++ you do the following:
+    // In C++ you can do this instead:
     int *p2;
     p2 = new int[5];
 
@@ -29,3 +29,19 @@ int main()
     delete []p2;
     free(p);
 }
+
+/* 
+Output: 
+0
+1
+2
+3
+4
+0
+8197984
+0
+1
+2
+3
+4
+*/
