@@ -1,4 +1,4 @@
-// This is Templates 
+// This is parameter Template
 
 #include <iostream>
 #include <stdlib.h>
@@ -41,3 +41,12 @@ int main()
 
 
 }
+
+/* 
+Output:
+
+int add = 15
+float add = 4.000000
+char add = â
+
+*/
