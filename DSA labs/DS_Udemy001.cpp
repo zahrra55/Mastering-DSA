@@ -15,6 +15,7 @@ int main()
         cout << x << endl;
         //printf("%d\n",a[x-1]);
     }
+// for dynamic assignments
 //    for(int i = 0; i < 5; i++)
 //    {
 //        //a[i] = i;
