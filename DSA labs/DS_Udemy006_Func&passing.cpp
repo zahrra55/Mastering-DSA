@@ -17,7 +17,9 @@ void swapAddress(int *a, int *b)
     *b = temp;
 }
 
-void swapReference(int &a, int &b) // Available only in C++
+// Swapping by reference is available in C++ (but not in C) 
+
+void swapReference(int &a, int &b)
 {
     int temp;
     temp = a;
@@ -36,7 +38,7 @@ int main()
     swapAddress(&a, &b);
     printf("a = %d  b = %d\n\n", a, b);
 
-    cout << "This is swap by Address:\n";
+    cout << "This is swap by Reference:\n";
     printf("c = %d  f = %d\n", c, f);
     swapReference(c, f);
     printf("c = %d  f = %d\n", c, f);
