@@ -19,7 +19,11 @@ int main()
     cout << "r.breadth = " << r.breadth << "\n\n";
 
     rectangle *p = &r;
+
+// This is in C
     cout << "(*p).breadth = " << (*p).breadth << endl;
+
+// This is in C++
     cout << "p -> length = " << p -> length << "\n\n";
 
     cout << "The following is inside the Heap:\n\n";
