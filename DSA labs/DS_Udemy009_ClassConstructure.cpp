@@ -20,9 +20,9 @@ int area();
 int permitere();
 int getlength() {return length;}
 void setlength(int l) {length = l;}
-~Rectangle();
+~Rectangle(); // destructor
 };
-
+// Assigning a constructor
 Rectangle :: Rectangle(int l, int b)
 {
     length = l;
