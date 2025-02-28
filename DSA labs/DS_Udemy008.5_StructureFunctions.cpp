@@ -37,3 +37,12 @@ int main()
     cout << "Area = " << area(r) << endl;
 
 }
+
+/* The output 
+
+r.length = 5 r.breadth = 5
+Area = 25
+r.length = 50 r.breadth = 5
+Area = 250
+
+*/
