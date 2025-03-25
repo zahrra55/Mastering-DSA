@@ -68,3 +68,14 @@ int main()
     printf("This is Nested recursion: %d \n", NestedRec(95));
 
 }
+
+/*
+Output:
+
+This is Tail recursion: 321
+This is Head recursion: 123
+This is Tree recursion: 3211211
+This is indirect recursion: 201998431
+This is Nested recursion: 91
+
+*/
