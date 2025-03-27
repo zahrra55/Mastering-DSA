@@ -8,11 +8,11 @@ double factorial(int n)
         return 1;
     else if (n > 0)
         return factorial(n - 1) * n;
-    else
-    {
+    //else //for negative numbers
+    //{
         // Using the formula: (-n)! = (-1)^n / (n!)
-        return (n % 2 == 0 ? 1 : -1) * (1.0 / factorial(-n));
-    }
+        //return (n % 2 == 0 ? 1 : -1) * (1.0 / factorial(-n));
+    //}
 }
 
 int main()
