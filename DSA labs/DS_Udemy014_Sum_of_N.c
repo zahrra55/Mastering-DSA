@@ -1,4 +1,4 @@
-// These are recursion types
+// This is how to find the sum of N natural numbers in 3 different ways.
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -32,6 +32,6 @@ int main()
     printf("This is Sum with Loop: %d \n", loopSum(x));
     printf("This is sum casually: %d \n", N_Sum(x));
 
-
-
 }
+
+// Note: the output of all functions = 15, when the input = 5.
