@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function to compute factorial, including for negative numbers
+// Function to compute the power of a given m number 
 int exponent(int m, int n)
 {
     if (n == 0)
@@ -20,6 +20,7 @@ int exponent_fast(int m, int n)
     else
         return m * exponent_fast(m * m, (n - 1) / 2);
 }
+
 int main()
 {
     int x,y;
@@ -31,7 +32,6 @@ int main()
     printf("%d^%d is: %d\n", x, y, exponent(x,y));
     printf("%d^%d (fast) is: %d\n\n", x, y, exponent_fast(x,y));
     }
-
-
+    
     return 0;
 }
