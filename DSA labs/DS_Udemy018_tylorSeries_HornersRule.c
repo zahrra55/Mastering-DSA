@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-// Taylor Series using Static variables
+// Taylor Series using Horner's rule.
 
 double e(int x, int n)
 {
