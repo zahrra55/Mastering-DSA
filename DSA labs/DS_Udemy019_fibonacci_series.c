@@ -1,5 +1,4 @@
 // Fibonacci
-
 #include <stdio.h>
 
 int iterative_fib(int n)
@@ -24,10 +23,11 @@ int recursive_fib(int n)
     return recursive_fib(n - 2) + recursive_fib(n - 1);
 }
 
-// Using memorization to solve the excessive recursion
+// Using memoization to solve the excessive recursion
+// O(n).
 int F[10];
 
-int memorization_fib(int n)
+int memoization_fib(int n)
 {
     if(n <= 1)
     {
@@ -37,9 +37,9 @@ int memorization_fib(int n)
  else
     {
      if(F[n - 2] == -1)
-        F[n - 2] = memorization_fib(n - 2);
+        F[n - 2] = memoization_fib(n - 2);
      if(F[n - 1] == -1)
-        F[n - 1] = memorization_fib(n - 1);
+        F[n - 1] = memoization_fib(n - 1);
      F[n] = F[n - 2] + F[n - 1];
      return F[n - 2] + F[n - 1];
     }
@@ -54,7 +54,7 @@ int main()
 
     printf("Iterative Fibonacci = %d \n", iterative_fib(n));
     printf("recursive Fibonacci = %d \n", recursive_fib(n));
-    printf("memorization Fibonacci = %d \n", memorization_fib(n));
+    printf("memoization Fibonacci = %d \n", memoization_fib(n));
 
     return 0;
 }
