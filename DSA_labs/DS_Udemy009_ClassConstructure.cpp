@@ -28,12 +28,12 @@ Rectangle :: Rectangle(int l, int b)
     length = l;
     breadth = b;
 }
-Rectangle :: area()
+int Rectangle :: area()
 {
     return length * breadth;
 }
 
-Rectangle :: permitere()
+int Rectangle :: permitere()
 {
     return 2 * (length + breadth);
 }
