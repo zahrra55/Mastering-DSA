@@ -1,4 +1,5 @@
-// This is Tower of Hanoi
+// This is Tower of Hanoi using recursion
+// This is a classic problem in recursion.
 
 #include<stdio.h>
 
