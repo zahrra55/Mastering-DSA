@@ -1,3 +1,5 @@
+// The Recursion final Quize 
+
 #include<stdio.h>
 
 // Q1- what's the return value of Q1_fun(1)?
@@ -30,6 +32,6 @@ int main()
     Q1_fun(1);
     Q2_fun(a, sum);
     printf("%d", sum);
-    // The final result of Q2_fun will be: 7 8 4 2 0
+    // The final result of Q2_fun will be: 
     return 0;
 }
