@@ -1,5 +1,4 @@
 // The Recursion final Quize 
-// more questions to come, keep it up!!
 
 #include<stdio.h>
 
