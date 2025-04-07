@@ -13,26 +13,27 @@ int Q1_fun(int n)
     // The final result of Q1_fun(1) will be: 7
 }
 
-int Q2_fun(int n, int sum)
+void Q2_fun(int n, int sum)
 {
     int k = 0, j = 0;
     if (n == 0)
-        return n;
+        return;
     k = n % 10;
     j = n / 10;
     sum += k;
     Q2_fun(j, sum);
     printf("%d ", k); 
     // The final result of Q2_fun(2048, 0) will be: 20480
+    // The last zero is the value of sum provided by main().
 }
 
-int Q3_fun(int &x, int c)
+int Q3_fun(int *x, int c)
 {
     c -= 1;
     if (c == 0)
         return 1;
-    x += 1;
-    return Q3_fun(x, c) * x;
+    (*x) += 1;
+    return Q3_fun(x, c) * (*x);
     // The final result of Q5_fun(5, 5) will be: 9^4 = 6561
 }
 
@@ -62,11 +63,11 @@ int main()
 {
     int a = 2048, sum = 0, p = 5;
 
-    printf("Q1 Output is: %d", Q1_fun(1));
-    printf("Q2 Output is: %d", Q2_fun(a, sum));
-    printf("Q3 Output is: %d", Q3_fun(p, p));
-    printf("Q4 Output is: %d", Q4_fun(5));
-    printf("Q5 Output is: %d", Q5_fun());
+    printf("Q1 Output is: %d \n", Q1_fun(1));
+    printf("Q2 Output is: "); Q2_fun(a, sum); printf("%d \n", sum);
+    printf("Q3 Output is: %d \n", Q3_fun(&p, p));
+    printf("Q4 Output is: %d \n", Q4_fun(5));
+    printf("Q5 Output is: %d \n", Q5_fun(3));
     
     return 0;
 }
