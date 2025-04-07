@@ -43,22 +43,23 @@ int Q4_fun(int n)
     if(n == 1)
         return x;
     for(int k = 1; k < n; ++k)
-        x = x * x + Q4_fun(k) * Q4_fun(n - k);
+        x = x + Q4_fun(k) * Q4_fun(n - k);
     return x;
     // The final result of Q4_fun(5) will be: 51
 
 }
 
-int Q5_fun(int n)
+void Q5_fun(int n)
 {
     static int d = 1;
-    printf("%d %d", n, d);
+    printf("%d %d ", n, d);
     d++;
-    if (n > 0)
+    if (n > 1)
         Q5_fun(n - 1);
     printf("%d ", d);
     // The final result of Q5_fun(3) will be: 312213444
 }
+
 int main()
 {
     int a = 2048, sum = 0, p = 5;
@@ -67,7 +68,7 @@ int main()
     printf("Q2 Output is: "); Q2_fun(a, sum); printf("%d \n", sum);
     printf("Q3 Output is: %d \n", Q3_fun(&p, p));
     printf("Q4 Output is: %d \n", Q4_fun(5));
-    printf("Q5 Output is: %d \n", Q5_fun(3));
-    
+    printf("Q5 Output is: "); Q5_fun(3); printf("\n");
+
     return 0;
 }
