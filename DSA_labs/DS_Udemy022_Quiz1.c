@@ -23,8 +23,7 @@ void Q2_fun(int n, int sum)
     sum += k;
     Q2_fun(j, sum);
     printf("%d ", k); 
-    // The final result of Q2_fun(2048, 0) will be: 20480
-    // The last zero is the value of sum provided by main().
+    // The final result of Q2_fun(2048, 0) will be: 2048
 }
 
 int Q3_fun(int *x, int c)
@@ -65,7 +64,8 @@ int main()
     int a = 2048, sum = 0, p = 5;
 
     printf("Q1 Output is: %d \n", Q1_fun(1));
-    printf("Q2 Output is: "); Q2_fun(a, sum); printf("%d \n", sum);
+    printf("Q2 Output is: "); Q2_fun(a, sum); printf("%d \n", sum); 
+    // Output: 20480 (The last zero is the value of sum).
     printf("Q3 Output is: %d \n", Q3_fun(&p, p));
     printf("Q4 Output is: %d \n", Q4_fun(5));
     printf("Q5 Output is: "); Q5_fun(3); printf("\n");
