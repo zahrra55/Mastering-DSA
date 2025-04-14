@@ -14,14 +14,35 @@ int main()
     }
 
     // Increasing the size of an array
-    int *p = (int *)malloc(5 * sizeof(int));
+    int *p = malloc(5 * sizeof(int));
+    if (p == NULL)
+    {
+        printf("Memory allocation failed for p\n");
+        return 1;
+    }
+
     p[0] = 1;
     p[1] = 2;
     p[2] = 3;
     p[3] = 4;
     p[4] = 5;
 
-    int *q = (int *)malloc(10 * sizeof(int));
+    for (int i = 0; i < 5; i++)
+    {
+        printf("p[%d](befor): %d\n", i, p[i]);
+    }
+      
+    int *q = malloc(10 * sizeof(int));
+    if (q == NULL)
+    {
+        printf("Memory allocation failed for q\n");
+        free(p);
+        return 1;
+    }
+
+    printf("q: %p\n p: %p\n", (void *)q, (void *)p);
+    // Copying elements from p to q
+    
     for (int i = 0; i < 5; i++)
     {
         q[i] = p[i];
@@ -32,9 +53,10 @@ int main()
     p = q;   // Reassign p to point to q
     q = NULL; // Set q to NULL to avoid accidental use
 
+
     for (int i = 0; i < 10; i++)
     {
-        printf("p[%d]: %d\n", i, p[i]);
+        printf("p[%d](after): %d\n", i, p[i]);
     }
 
     printf("q: %p\n p: %p\n", (void *)q, (void *)p);
