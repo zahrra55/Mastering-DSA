@@ -57,7 +57,7 @@ int main()
     printf("Enter index and value to insert: ");
     scanf("%d %d", &index, &value);
     Insert(&arr1, index, value);
-    //0Insert(&arr1, 0, 12);
+    //Insert(&arr1, 0, 12);
 
     // Display the array
     Display(arr1);
