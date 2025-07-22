@@ -55,7 +55,7 @@ void indirect_B(int n)
     }
 }
 
-// Nested Recursion is when a function calls itself with a recursive call as an argument.
+// 5. Nested Recursion is when a function calls itself with a recursive call as an argument.
 int NestedRecursion(int n)
 {
     if (n > 100)
