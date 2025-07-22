@@ -5,32 +5,38 @@
 
 void indirect_B(int n);
 
-void TailRec(int n)
+// 1. Tail Recursion: When the call happens at the last statement of the function.
+void TailRecursion(int n)
 {
     if(n > 0)
     {
         printf("%d", n);
-        TailRec(n - 1);
+        TailRecursion(n - 1); // Nothing comes after it.
     }
 }
 
-void HeadRec(int n)
+// 2. Head Recursion: When the call happens at the First statement of the function.
+void HeadRecursion(int n)
 {
     if(n > 0)
     {
-        HeadRec(n - 1);
+        HeadRecursion(n - 1); // Nothing comes before it.
         printf("%d", n);
     }
 }
-void treeRec(int n)
+
+// 3. tree Recursion: A recursive function that calls itself more than once.
+void treeRecursion(int n)
 {
     if (n > 0)
     {
         printf("%d", n);
-        treeRec(n - 1);
-        treeRec(n - 1);
+        treeRecursion(n - 1);
+        treeRecursion(n - 1);
     }
 }
+
+// 4. Indirect Recursion is when two or more functions (or methods) call each other in a cycle (Sequence)
 void indirect_A(int n)
 {
     if(n > 0)
@@ -40,7 +46,6 @@ void indirect_A(int n)
     }
 }
 
-// 4. indirect recursion
 void indirect_B(int n)
 {
     if(n > 1)
@@ -50,22 +55,23 @@ void indirect_B(int n)
     }
 }
 
-int NestedRec(int n)
+// Nested Recursion is when a function calls itself with a recursive call as an argument.
+int NestedRecursion(int n)
 {
     if (n > 100)
         return n - 10;
     else
-        return NestedRec(NestedRec(n + 11));
+        return NestedRecursion(NestedRecursion(n + 11));
 }
 int main()
 {
     int x = 3;
 
-    printf("This is Tail recursion: "); TailRec(x); printf("\n");
-    printf("This is Head recursion: "); HeadRec(x); printf("\n");
-    printf("This is Tree recursion: "); treeRec(x); printf("\n");
+    printf("This is Tail recursion: "); TailRecursion(x); printf("\n");
+    printf("This is Head recursion: "); HeadRecursion(x); printf("\n");
+    printf("This is Tree recursion: "); treeRecursion(x); printf("\n");
     printf("This is indirect recursion: "); indirect_A(20); printf("\n");
-    printf("This is Nested recursion: %d \n", NestedRec(95));
+    printf("This is Nested recursion: %d \n", NestedRecursion(95));
 
 }
 
